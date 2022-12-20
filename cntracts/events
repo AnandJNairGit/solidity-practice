@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.9.0;
+
+contract Events{
+
+    event balance(address account, string message, uint value);
+
+    function setData(uint _val) public {
+        emit balance(msg.sender, "message to set", _val);
+    }
+}
+
+contract chatApp
+{
+    event chat(address _from, address _to, string message)
+}
